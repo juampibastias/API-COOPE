@@ -1,0 +1,43 @@
+<div class="container" style="margin: 100px auto">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h4>Agregar nuevo corte programado</h4>
+      <form
+        action="/admin/cortesprogramados/agregarcortes"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Fecha y hora del inicio de corte..."
+            name="iniciocorte"
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            type="text"
+            class="form-control"
+            placeholder="Detalle de zonas afectadas..."
+            name="zonaafectada"
+          ></textarea>
+        </div>
+        <br />
+        <div class="form-group">
+          <textarea
+            type="text"
+            class="form-control"
+            placeholder="Fecha y hora de fin del corte..."
+            name="fincorte"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a href="http://localhost:3000/admin/cortesprogramados" class="btn btn-success"><i class="fas fa-long-arrow-alt-left"> </i>Volver</a>
+      </form>
+      {{#if error}}
+        {{message}}
+      {{/if}}
+    </div>
+  </div>
+</div>

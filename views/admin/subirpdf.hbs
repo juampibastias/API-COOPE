@@ -1,0 +1,21 @@
+<div class="container" style="margin: 50px auto">
+    <div class="row">
+        <div class"col-6 offset-3">
+            <h4>Subir facturas clientes</h4>
+            <form action="/admin/principal" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+            <label for="">Carga las facturas: </label>
+        
+    <label><input type="file" name="pdf" id="pdf" /></label>
+</div>
+<button type="submit" class="btn btn-primary">Subir</button>
+<a href="http://localhost:3000/admin/principal" class="btn btn-success"><i class="fas fa-long-arrow-alt-left"> </i>Volver</a>
+            </form>
+            {{#if error}}
+
+            <p>{{message}}</p>
+
+            {{/if}}
+        </div>
+    </div>
+</div>
